@@ -7,7 +7,7 @@ spec:
   interval: 60m
   chart:
     spec:
-      chart: elastic-operator-crds
+      chart: eck-operator-crds
       sourceRef:
         kind: HelmRepository
         name: elastic
