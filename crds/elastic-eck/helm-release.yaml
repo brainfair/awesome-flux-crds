@@ -1,0 +1,14 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: elastic-operator-crds
+  namespace: flux-system
+spec:
+  interval: 60m
+  chart:
+    spec:
+      chart: elastic-operator-crds
+      sourceRef:
+        kind: HelmRepository
+        name: elastic
+      interval: 5m
