@@ -7,7 +7,7 @@ spec:
   interval: 24h
   url: https://github.com/k8ssandra/cass-operator.git
   ref:
-    branch: main
+    branch: master
   ignore: |
     # exclude all
     /*
