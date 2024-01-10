@@ -1,0 +1,15 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: victoria-metrics
+  namespace: flux-system
+spec:
+  interval: 24h
+  url: https://github.com/VictoriaMetrics/helm-charts
+  ref:
+    branch: master
+  ignore: |
+    # exclude all
+    /*
+    # include deploy dir
+    !/charts/victoria-metrics-k8s-stack/charts/crds
