@@ -1,0 +1,28 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: k8ssandra-operator
+  namespace: flux-system
+spec:
+  interval: 24h
+  url: https://github.com/k8ssandra/k8ssandra-operator.git
+  ref:
+    branch: main
+  ignore: |
+    # exclude all
+    /*
+    # include crd dir
+    !/config/crd
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: k8ssandra-operator
+  namespace: flux-system
+spec:
+  interval: 24h
+  path: ./config/crd
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: k8ssandra-operator

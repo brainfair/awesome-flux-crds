@@ -1,0 +1,28 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: cass-operator
+  namespace: flux-system
+spec:
+  interval: 24h
+  url: https://github.com/k8ssandra/cass-operator.git
+  ref:
+    branch: main
+  ignore: |
+    # exclude all
+    /*
+    # include crd dir
+    !/config/crd
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: cass-operator
+  namespace: flux-system
+spec:
+  interval: 24h
+  path: ./config/crd
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: cass-operator
