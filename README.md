@@ -60,4 +60,19 @@ The Git repository contains the following top directories:
     └── aks
 ```
 
-# NB: All CRDs pointed to latest version available in upstream, use it carefully or clone example and use pinned specific versions.
+## CRDs list
+
+Next CRDs available in the example:
+
+* cert-manager
+* cloudnative-pg
+* elastic-eck
+* external-secrets
+* istio
+* k8ssandra-operator
+* metallb
+* Prometheus
+* strimzi
+* VictoriaMetrics
+
+# NB: All CRDs pointed to the latest version available upstream, use it carefully or clone the example and use pinned-specific versions.
