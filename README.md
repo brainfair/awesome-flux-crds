@@ -24,6 +24,9 @@ spec:
   secretRef:
     name: flux-system
   url: https://github.com/brainfair/awesome-flux-crds.git
+  ignore: |
+    # exclude README.md
+    /README.md
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
