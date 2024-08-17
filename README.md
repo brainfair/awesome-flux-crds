@@ -2,6 +2,9 @@
 
 This repository contains CRDs from popular operators for Kubernetes installed via Flux2. All CRDs are moved to this repository, since Flux2 cannot install a product and custom resource if the CRD is not yet available.
 
+## Support Project
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/N4N011QV6F)
+
 ## Prerequisites
 
 You will need a Kubernetes cluster version 1.21 or newer with installed Flux
