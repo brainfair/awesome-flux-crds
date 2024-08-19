@@ -5,12 +5,12 @@ metadata:
   namespace: flux-system
 spec:
   interval: 60m
-  reconcileStrategy: Revision
   driftDetection:
     mode: enabled
   chart:
     spec:
       chart: ./charts/victoria-metrics-k8s-stack/charts/crds
+      reconcileStrategy: Revision
       sourceRef:
         kind: GitRepository
         name: victoria-metrics
