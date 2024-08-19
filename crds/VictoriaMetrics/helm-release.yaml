@@ -5,6 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 60m
+  reconcileStrategy: Revision
   driftDetection:
     mode: enabled
   chart:
