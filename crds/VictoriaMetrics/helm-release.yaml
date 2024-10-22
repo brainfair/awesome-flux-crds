@@ -9,7 +9,7 @@ spec:
     mode: enabled
   chart:
     spec:
-      chart: ./charts/victoria-metrics-k8s-stack/charts/crds
+      chart: ./charts/victoria-metrics-operator/charts/crds
       reconcileStrategy: Revision
       sourceRef:
         kind: GitRepository

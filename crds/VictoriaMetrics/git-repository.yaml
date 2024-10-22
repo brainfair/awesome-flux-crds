@@ -12,4 +12,4 @@ spec:
     # exclude all
     /*
     # include deploy dir
-    !/charts/victoria-metrics-k8s-stack/charts/crds
+    !/charts/victoria-metrics-operator/charts/crds
