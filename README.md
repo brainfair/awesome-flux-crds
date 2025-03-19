@@ -69,7 +69,7 @@ The Git repository contains the following top-level directories:
 
 ## CRDs list
 
-Next CRDs available in the example:
+The next CRDs available in the example are:
 
 * cert-manager
 * cloudnative-pg
