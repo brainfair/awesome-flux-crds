@@ -1,17 +1,18 @@
 # Awesome Flux2 CRDs repository
 
-This repository contains CRDs from popular operators for Kubernetes installed via Flux2. All CRDs are moved to this repository, since Flux2 cannot install a product and custom resource if the CRD is not yet available.
+This repository contains CRDs from popular operators for Kubernetes installed via Flux2. All CRDs are moved to this repository because Flux2 cannot install a product and custom resource if the CRD is not yet available.
 
 ## Support Project
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/N4N011QV6F)
 
 ## Prerequisites
 
-You will need a Kubernetes cluster version 1.21 or newer with installed Flux
+- Kubernetes cluster version 1.24 or newer
+- Flux version 2.3.0 or newer bootstrapped to the [Head repository (example)](https://github.com/brainfair/awesome-flux-head)
 
 ## Import current repository
 
-Create GitRepository and Flux Kustomization in you main repository:
+Create a GitRepository and a Flux Kustomization in your main repository.
 
 ```yaml
 ---
@@ -49,10 +50,10 @@ spec:
 
 ## Repository structure
 
-The Git repository contains the following top directories:
+The Git repository contains the following top-level directories:
 
-- **crds** dir contains CRDs folder with various installation method depends on product
-- **bundles** (optionally) you can create bundles folder with bundle specific set of CRDs for EKS/AKS/etc
+- **crds** Contains the CRDs folder with various installation methods, depending on the product.
+- **bundles** (optionally) You can create a bundles folder with a specific set of CRDs for EKS, AKS, etc.
 
 ```
 ├── crds
@@ -81,4 +82,4 @@ Next CRDs available in the example:
 * strimzi
 * VictoriaMetrics
 
-# NB: All CRDs pointed to the latest version available upstream, use it carefully or clone the example and use pinned-specific versions.
+# NB: All CRDs point to the latest version available upstream. Use them carefully, or clone the example and use a pinned, specific version.
