@@ -14,7 +14,7 @@
       "matchStrings": [
         "https:\/\/raw.githubusercontent.com\/(?<depName>[^\/]*\/[^\/]*)\/(?<currentValue>.*?)\/"
       ],
-      "datasourceTemplate": "github-tags",
+      "datasourceTemplate": "github-tags"
     }
   ]
 }
