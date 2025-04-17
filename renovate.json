@@ -11,12 +11,6 @@
   "regexManagers": [
     {
       "fileMatch": "kustomization.yaml",
-      "matchStrings": ["https:\/\/github\.com\/(?<depName>.*\/.*?)\/releases\/download\/(?<currentValue>.*?)\/"
-      ],
-      "datasourceTemplate": "github-releases",
-    },
-    {
-      "fileMatch": "kustomization.yaml",
       "matchStrings": [
         "https:\/\/raw.githubusercontent.com\/(?<depName>[^\/]*\/[^\/]*)\/(?<currentValue>.*?)\/"
       ],
