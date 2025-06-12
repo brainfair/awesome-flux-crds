@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
 - git-repository-cass.yaml
 - git-repository-k8ssandra.yaml
+namespace: flux-system

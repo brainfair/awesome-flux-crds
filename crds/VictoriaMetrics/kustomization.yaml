@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
 - git-repository.yaml
 - helm-release.yaml
+namespace: flux-system
