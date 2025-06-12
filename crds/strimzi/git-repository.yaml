@@ -2,7 +2,6 @@ apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
   name: strimzi
-  namespace: flux-system
 spec:
   interval: 24h
   url: https://github.com/strimzi/strimzi-kafka-operator.git
@@ -18,7 +17,6 @@ apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
   name: strimzi
-  namespace: flux-system
 spec:
   interval: 24h
   path: ./helm-charts/helm3/strimzi-kafka-operator/crds
