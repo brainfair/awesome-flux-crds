@@ -10,3 +10,10 @@ metadata:
   name: istio-ingress
   labels:
     istio-injection: enabled
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: istio-egress
+  labels:
+    istio-injection: enabled
