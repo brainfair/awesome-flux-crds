@@ -4,15 +4,18 @@
     "config:recommended"
   ],
   "kubernetes": {
-    "fileMatch": [
-      "\\.yaml$"
+    "managerFilePatterns": [
+      "/\\.yaml$/"
     ]
   },
-  "regexManagers": [
+  "customManagers": [
     {
-      "fileMatch": "kustomization.yaml",
+      "customType": "regex",
+      "managerFilePatterns": [
+        "/kustomization.yaml/"
+      ],
       "matchStrings": [
-        "https:\/\/raw.githubusercontent.com\/(?<depName>[^\/]*\/[^\/]*)\/(?<currentValue>.*?)\/"
+        "https://raw.githubusercontent.com/(?<depName>[^/]*/[^/]*)/(?<currentValue>.*?)/"
       ],
       "datasourceTemplate": "github-tags"
     }
