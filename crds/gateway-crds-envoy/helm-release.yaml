@@ -1,0 +1,28 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: envoyproxy-crds
+  namespace: flux-system
+spec:
+  releaseName: envoyproxy-crds
+  chartRef:
+    kind: OCIRepository
+    name: gateway-crds-helm
+    namespace: flux-system
+  interval: 15m
+  timeout: 5m
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  # Defaults: https://github.com/envoyproxy/gateway/blob/main/charts/gateway-crds-helm/values.yaml
+  values:
+    crds:
+      gatewayAPI:
+        enabled: true
+        channel: standard
+      envoyGateway:
+        enabled: true
