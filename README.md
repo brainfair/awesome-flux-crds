@@ -1,6 +1,7 @@
 # Awesome Flux2 CRDs repository
 
 This repository contains CRDs from popular operators for Kubernetes installed via Flux2. All CRDs are moved to this repository because Flux2 cannot install a product and custom resource if the CRD is not yet available.
+- [KubeStellar Console](https://github.com/kubestellar/console) - Multi-cluster Kubernetes dashboard with AI-powered operations, real-time observability, and CNCF project integrations across edge and cloud clusters.
 
 ## Support Project
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/N4N011QV6F)
